@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Dettaglio del libro</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+	<h2 id="title"></h2>
+	<img id="image">
+	<div class="row">
+		<div class="col-8">
+			<dl>
+				<dt>Autore:</dt>
+				<dd id="author"></dd>
+				<dt>ISBN:</dt>
+				<dd id="isbn"></dd>
+				<dt>Copie disponibili:</dt>
+				<dd id="availableCopies"></dd>
+			</dl>
+		</div>
+		<div class="col-4" >
+			<h3 id="categories" class="d-none">Categorie:</h3>
+			<ul id="ul_categories">
+				
+			</ul>
+		</div>
+	</div>
+	<h3>Prestiti:</h3>
+	<p id="no_borrowings" class="d-none">non ci sono prestiti</p>
+	<div class="col-12">
+		<a class="btn btn-primary" 
+		href="../borrowings/create.html?bookId="+${book.id}
+		>Nuovo prestito</a> 
+	<table id="borrowings_table" class="table">
+		<thead>
+			<tr>
+				<td>Id</td>
+				<td>Data</td>
+				<td>Restituzione</td>
+				<td>Note</td>
+			</tr>
+		</thead>
+		<tbody>
+			
+		</tbody>
+	</table>
+	</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script/detail.js"></script>
+</body>
+</html>
