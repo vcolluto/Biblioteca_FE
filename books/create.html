@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Nuovo libro</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+<div class="container">
+	<h1>Nuovo libro</h1>
+	<hr/>
+	<form id="book-form" method="post" onsubmit="createBook(event)">
+	  	<ul id="validation_errors">
+	      
+  		</ul>
+	  	<div class="row">
+	  	<div class="col-8">
+		  	<label for="title" class="form-label">Titolo</label>
+	  		<input type="text" class="form-control" id="title">  			
+			<div class="text-danger">
+				<ul id="title_err">
+				   
+				</ul>
+	  		</div>
+  		
+	  		<label for="author" class="form-label">Autore</label>
+	  		<input type="text" class="form-control" id="author"  >
+	  		<div class="text-danger" >
+				<ul id="author_err">
+				  
+				</ul>
+	  		</div>
+  		
+  		
+		  	<label for="isbn" class="form-label">ISBN</label>
+	  		<input type="text" class="form-control" id="isbn" >
+	  		<div  class="text-danger" >
+				<ul id="isbn_err">
+				  
+				</ul>
+	  		</div>
+	  		
+	  		<label for="availableCopies" class="form-label">Copie</label>
+	  		<input type="number" class="form-control" id="availableCopies" >
+	  		<div  class="text-danger">
+				<ul id="availableCopies_err">
+				  
+				</ul>
+	  		</div>
+  		
+	  		<button type="submit" class="btn btn-primary">Salva</button>
+	  		<a class="btn btn-primary" href="./index.html">Annulla</a>
+	  		</div>
+	  		
+  		</div>
+	</form>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script/create.js"></script>
+</body>
+</html>
